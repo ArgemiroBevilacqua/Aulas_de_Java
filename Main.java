@@ -1,13 +1,35 @@
 package main;
 
+import java.util.*;
+
 public class Main {
+
 	public static void main(String[] args) {
 		
-		Cachorro meuCachorro = new Cachorro();
+		List<String> minhaLista = new ArrayList<String>();
 		
-		meuCachorro.comer();
-		meuCachorro.dormir();
+		
+		minhaLista.add("a");
+		minhaLista.add("b");
+		minhaLista.add("c");
+		
+		
+		System.out.println(minhaLista);
+		
+		
+		minhaLista.remove("b");
+		System.out.println(minhaLista);
+		
+		System.out.println(minhaLista.contains("a"));
+		
+		System.out.println(minhaLista.size());
+		
+		System.out.println(minhaLista.isEmpty());
+		
+		
+		minhaLista.clear();
+		System.out.println(minhaLista);
+
 	}
-	
-	
+
 }
