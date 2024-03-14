@@ -1,9 +1,11 @@
 package main;
 
-public class Cachorro extends Animal {
-	String raca;
+class Cachorro implements Animal {
+	public void comer() {
+		System.out.println("O cachorro está comendo");
+	}
 	
-	void exibirRaca() {
-		System.out.println("Raca: " + raca);
+	public void dormir() {
+		System.out.println("O cachorro está dormindo");
 	}
 }
