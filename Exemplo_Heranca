@@ -1,0 +1,32 @@
+class Animal {
+		String nome;
+		int idade;
+		
+		void exibirDetalhes() {
+			System.out.println("Nome: " + nome);
+			System.out.println("Idade: " + idade);
+		}
+}
+
+class Cachorro extends Animal {
+	String raca;
+	
+	void exibirRaca() {
+		System.out.println("Raca: " + raca);
+	}
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Cachorro meuCachorro = new Cachorro();
+		
+		meuCachorro.nome = "Rex";
+		meuCachorro.idade = 5;
+		meuCachorro.raca = "Labrador";
+		
+		meuCachorro.exibirDetalhes();
+		meuCachorro.exibirRaca();
+	}
+}
