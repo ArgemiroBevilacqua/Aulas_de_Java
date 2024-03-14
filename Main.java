@@ -3,12 +3,15 @@ package main;
 public class Main {
 
 	public static void main(String[] args) {
-		try {
-			throw new MinhaExcecao("Esta é uma exceção definida pelo usuário!");
-		} catch (MinhaExcecao e) {
-			System.out.println(e.getMessage());
-		}
-
+		
+		Cachorro meuCachorro = new Cachorro();
+		
+		meuCachorro.nome = "Rex";
+		meuCachorro.idade = 5;
+		meuCachorro.raca = "Labrador";
+		
+		meuCachorro.exibirDetalhes();
+		meuCachorro.exibirRaca();
 	}
 
 }
