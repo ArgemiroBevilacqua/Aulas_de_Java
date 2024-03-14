@@ -1,0 +1,18 @@
+package main;
+
+public class MinhaExcecao extends Exception {
+	public MinhaExcecao(String mensagem) {
+		super(mensagem);
+	}
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+		try {
+			throw new MinhaExcecao("Esta é uma exceção definida pelo usuário!");
+		} catch (MinhaExcecao e) {
+			System.out.println(e.getMessage());
+		}
+	}
+}
