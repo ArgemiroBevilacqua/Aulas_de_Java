@@ -1,0 +1,111 @@
+package Aula_03;
+
+import java.util.*;
+
+class Animal {
+    String nome;
+    int idade;
+    
+    void exibirDetalhes() {
+        System.out.println("Nome: " + nome);
+        System.out.println("Idade: " + idade);
+    }
+}
+
+
+class Cachorro extends Animal {
+    String raca;
+    
+    void exibirRaca() {
+        System.out.println("Raça: " + raca);
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        Cachorro meuCachorro = new Cachorro(); 
+        
+        meuCachorro.nome = "Rex";
+        meuCachorro.idade = 5;
+        meuCachorro.raca = "Labrador"; 
+        
+        meuCachorro.exibirDetalhes(); 
+        meuCachorro.exibirRaca(); 
+    }
+}
+#execerico01
+class Planta {
+    void fotossintese() {
+        System.out.println("Realizando fotossíntese...");
+    }
+}
+
+class Flor extends Planta {
+    @Override
+    void fotossintese() {
+        System.out.println("Realizando fotossíntese como uma flor...");
+    }
+}
+
+class Arvore extends Planta {
+    @Override
+    void fotossintese() {
+        System.out.println("Realizando fotossíntese como uma árvore...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Planta planta = new Planta();
+        planta.fotossintese();
+
+        Flor flor = new Flor();
+        flor.fotossintese();
+
+        Arvore arvore = new Arvore();
+        arvore.fotossintese();
+    }
+}
+#exercicio03
+abstract class InstrumentoMusical {
+    abstract void tocar();
+    abstract void afinar();
+}
+
+class Violao extends InstrumentoMusical {
+    @Override
+    void tocar() {
+        System.out.println("Tocando violão...");
+    }
+
+    @Override
+    void afinar() {
+        System.out.println("Afinando violão...");
+    }
+}
+
+class Piano extends InstrumentoMusical {
+    @Override
+    void tocar() {
+        System.out.println("Tocando piano...");
+    }
+
+    @Override
+    void afinar() {
+        System.out.println("Afinando piano...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Violao violao = new Violao();
+        Piano piano = new Piano();
+
+        violao.afinar();
+        violao.tocar();
+
+        piano.afinar();
+        piano.tocar();
+    }
+}
