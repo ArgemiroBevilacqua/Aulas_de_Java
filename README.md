@@ -29,3 +29,57 @@ public class Main {
 	}
 	
 }
+
+
+#exercio01
+
+
+package Aula_03;
+
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args)
+	{
+		List<String> minhalista = new ArrayList <String>();
+		
+		minhalista.add("1");
+		minhalista.add("2");
+		minhalista.add("3");
+		minhalista.add("4");
+		minhalista.add("5");
+		
+		System.out.println (minhalista);
+		
+				
+	}
+	
+}
+#exercio03
+ackage Aula_03;
+
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args)
+	{
+		List<String> minhalista = new ArrayList <String>();
+		
+		minhalista.add("Arroz");
+		minhalista.add("Feijão");
+		minhalista.add("Macarrão");
+		minhalista.add("Bolacha");
+		minhalista.add("Maçã");
+		minhalista.add("Banana");
+		
+		
+		System.out.println (minhalista);
+		
+				
+	}
+	
+}
+
+
