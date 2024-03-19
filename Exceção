@@ -14,11 +14,11 @@ public class Livro {
     }
 
     public static void main(String[] args) {
-        Livro livro = new Livro(100); // Exemplo de um livro com 100 páginas
+        Livro livro = new Livro(100);
 
         try {
             livro.lerPagina(50); // Lendo uma página válida
-            livro.lerPagina(110); // Tentativa de ler uma página inválida
+            livro.lerPagina(110); 
         } catch (IllegalArgumentException e) {
             System.out.println("Erro: " + e.getMessage());
         }
