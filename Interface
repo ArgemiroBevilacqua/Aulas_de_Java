@@ -1,0 +1,83 @@
+package Aula_03;
+
+import java.util.*;
+
+public class Main {
+
+    
+    interface Animal {
+        void comer();
+        void dormir();
+    }
+
+    
+    static class Cachorro implements Animal {
+       
+        public void comer() {
+            System.out.println("O cachorro está comendo");
+        }
+
+        public void dormir() {
+            System.out.println("O cachorro está dormindo");
+        }
+    }
+
+    public static void main(String[] args) {
+       
+        Cachorro meuCachorro = new Cachorro();
+       
+        meuCachorro.comer(); 
+        meuCachorro.dormir(); 
+    }
+}
+#exercicio01
+package Aula_03;
+
+import java.util.*;
+
+
+interface DispositivoEletronico {
+    void ligar();
+    void desligar();
+}
+
+
+class Televisao implements DispositivoEletronico {
+    @Override
+    public void ligar() {
+        System.out.println("Televisão ligada");
+    }
+
+    @Override
+    public void desligar() {
+        System.out.println("Televisão desligada");
+    }
+}
+
+
+class Computador implements DispositivoEletronico {
+    @Override
+    public void ligar() {
+        System.out.println("Computador ligado");
+    }
+
+    @Override
+    public void desligar() {
+        System.out.println("Computador desligado");
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+       
+        DispositivoEletronico tv = new Televisao();
+        tv.ligar();
+        tv.desligar();
+
+       
+        DispositivoEletronico pc = new Computador();
+        pc.ligar();
+        pc.desligar();
+    }
+}
