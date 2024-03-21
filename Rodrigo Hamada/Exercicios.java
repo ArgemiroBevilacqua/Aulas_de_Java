@@ -1,0 +1,119 @@
+#Exemplo de Listas - EXERCÍCIO 1
+
+package Heranca;
+
+import java.util.*;
+
+public class Main {
+	public static void main(String [] args) {
+		List<String> minhaLista = new ArrayList<String>();
+
+		minhaLista.add("a");
+		minhaLista.add("b");
+		minhaLista.add("c");
+
+		System.out.println(minhaLista);
+
+		minhaLista.remove("b");
+		System.out.println(minhaLista);
+
+		System.out.println(minhaLista.contains("a"));
+
+		System.out.println(minhaLista.size());
+
+		System.out.println(minhaLista.isEmpty());
+
+		minhaLista.clear();
+		System.out.println(minhaLista);
+	}
+}
+
+# Exemplo de Heranças - EXERCÍCIO - 2
+
+class Animal{
+	String nome;
+	int idade;
+
+	void exibirDetalhes(){
+		System.out.println("Nome: " + nome);
+		System.out.println("Idade: " + idade);
+	}
+}
+
+class Cachorro extends Animal {
+	String raca;
+
+	void exibirRaca(){
+		System.out.println("Raça: " + raca);
+	}
+}
+
+public class Main {
+	public static void main(String[] args){
+		Cachorro meuCachorro = new Cachorro();
+
+		meuCachorro.nome = "Rex";
+		meuCachorro.idade = 5;
+		meuCachorro.raca = "Labrador";
+
+		meuCachorro.exibirDetalhes();
+		meuCachorro.exibirRaca();
+	}
+}
+
+# Exemplo de Interface - EXERCÍCIO 3
+
+interface Animal {
+	void comer();
+	void dormir();
+}
+
+class Cachorro implements Animal{
+	public void comer(){
+		System.out.println("O cachorro está comendo");
+	}
+
+	public void dormir(){
+		System.out.println("O cachorro está dormindo");
+	}
+}
+
+public class Main {
+	public static void main(String[] args){
+		Cachorro meuCachorro = new Cachorro();
+
+		meuCachorro.comer();
+		meuCachorro.dormir();
+	}
+}
+
+# Exemplo de Tratamento de Exceção - EXERCÍCIO 4
+
+public class Main {
+	public static void main(String[] args){
+		try{
+			int[] numeros = {1,2,3};
+			System.out.println(numeros[10]);
+		}catch (ArrayIndexOutOfBoundsException e){
+			System.out.println("Índice do array fora dos limites!");
+		} finally{
+			System.out.println("Este bloco 'finally' sempre será executado.");
+		}
+	}
+}
+
+public class MinhaExcecao extends Exception {
+	public MinhaExcecao(String mensagem){
+		super(mensagem);
+	}
+}
+
+public class Main {
+	public static void main(String[] args){
+		try{
+			throw new MinhaExcecao("Esta é uma exceção definida pelo usuário!");
+		} catch (MinhaExcecao e){
+			System.out.println(e.getMessage());
+		}
+	}
+}
