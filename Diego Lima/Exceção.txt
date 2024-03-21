@@ -1,0 +1,26 @@
+public class Livro {
+    private int totalPaginas;
+
+    public Livro(int totalPaginas) {
+        this.totalPaginas = totalPaginas;
+    }
+
+    public void lerPagina(int pagina) throws IllegalArgumentException {
+        if (pagina < 1 || pagina > totalPaginas) {
+            throw new IllegalArgumentException("Página inválida");
+        } else {
+            System.out.println("Lendo a página " + pagina);
+        }
+    }
+
+    public static void main(String[] args) {
+        Livro livro = new Livro(100);
+
+        try {
+            livro.lerPagina(50); // Lendo uma página válida
+            livro.lerPagina(110); 
+        } catch (IllegalArgumentException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
+    }
+}
