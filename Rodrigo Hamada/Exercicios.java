@@ -28,7 +28,7 @@ public class Main {
 	}
 }
 
-# Exemplo de Heranças - EXERCÍCIO - 2
+# Exemplo de Heranças - EXERCÍCIO 2
 
 class Animal{
 	String nome;
